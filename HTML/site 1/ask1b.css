@@ -1,0 +1,82 @@
+sides {
+    background-color: gray;
+    float: left;
+    width: 14%;
+    padding-bottom: 54%;	
+}
+asides {
+	
+    background-color: gray;
+    float: right;
+    width: 14%;
+	text-align: center;
+	padding-bottom: 52.25%;
+}
+
+centerPan {
+	float: left;
+    width: 70%; 
+    margin-left: 10px;	
+}
+
+sides ul {
+    list-style-type: none;
+    padding: 5px;
+}
+   
+asides ul{
+    text-decoration: none;
+	
+}
+
+header{
+    color: white;
+    background-color: black;
+    text-align: center;
+	padding: 1em;
+}
+
+
+footer{
+    color: white;
+    background-color: black;
+    text-align: center;
+	padding: 1em;
+	clear: left;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    height: 100%;
+    max-height:100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+table{
+	width:100%;
+}
+th, td {
+	height:30px;
+	border: 2px solid black; 
+}
+
+.list{
+	list-style-type:decimal;
+	color:yellow;
+}
+
+.list2{
+	list-style-type:square;
+	font-size:30px;
+	color:red;
+}
+
+#ul1{
+	list-style-type:none;
+	padding:0;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	<meta charset="utf-8" /> 
+		<style>
+			div#problemArea {border:solid 2px red; margin:7px; 
+			padding:5px;
+			background-color:#000000;
+			color: white;
+			float:left;
+			width:40%;} 
+		</style>
+	</head>
+	
+	
+	<body>
+	
+	<h1> Αποτελέσματα Φόρμας</h1>
+		<div id="problemArea">Εδω θα εμφανιστούν οι καταχωρίσεις</div>
+			
+      		<script>
+		// Utilities
+		
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,key,value) 
+	{
+        vars[key] = value;
+    });
+    return vars;
+}
+
+		
+		
+		// AppendTo(ID,TEXT) adds the text to the element with ID.
+		function appendTo(ID,Text){
+			var x = document.getElementById(ID);
+			x.innerHTML = x.innerHTML + "<br/>" + Text + "<br />";
+		}
+		var first = getUrlVars()["nameTXT"];
+        var second = getUrlVars()["age"];
+		var third0 = getUrlVars()["team0"];
+		var third1 = getUrlVars()["team1"];
+		var third2 = getUrlVars()["team2"];
+		var third3 = getUrlVars()["team3"];
+		var third4 = getUrlVars()["team4"];
+		var third5 = getUrlVars()["team5"];
+		var fourth = getUrlVars()["Cars"];
+		var fourth1 = getUrlVars()["myEm"];
+ 
+     //  alert(first);
+     //  alert(second);
+			appendTo("problemArea","<hr/>");
+        appendTo("problemArea", first);
+		appendTo("problemArea", second);
+		var omades="";
+		if(third0!=null)
+			omades += "paok";
+		if(third1!=null)
+			omades += " aris"
+		if(third2!=null)
+			omades +=(" iraklis");
+		if(third3!=null)
+			omades +=(" olimpiakos")
+		if(third4!=null)
+			omades +=(" panathinaikos")
+		if(third5!=null)
+			omades +=(" larisa")
+		appendTo("problemArea",omades);
+		appendTo("problemArea", fourth);
+		appendTo("problemArea",fourth1);
+		</script>  
+	
+	</body>
+	
+</html>

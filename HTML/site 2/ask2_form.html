@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8" /> 
+		<meta charset="utf-8">
+		<title>askhsh 2 </title>
+		
+		<script>
+			
+			function emailfun(){
+				  var x;
+				  
+				  x = document.forms["form"]["myEm"].value;
+					
+
+				  if (x.length > 15 ) {
+					alert("email must be less then 15 characters");
+					return false;
+				  }
+				  return true;
+			}
+			
+			function checkboxfun(){
+				
+					if (document.getElementById("paok").checked){
+						return true;
+					}
+					if (document.getElementById("aris").checked){
+						return true;
+					}
+					if (document.getElementById("iraklis").checked){
+						return true;
+					}
+					if (document.getElementById("olimpiakos").checked){
+						return true;
+					}
+					if (document.getElementById("panathinaikos").checked){
+						return true;
+					}
+					if (document.getElementById("larisa").checked){
+						return true;
+					}
+					
+				
+				alert("Choose a check box");
+				return false;
+			}
+			
+			function CheckNumbers(){
+				var nameTXT =  document.getElementById("usernam").value;
+				
+				 if(/\d/.test(nameTXT)){
+					
+					alert("the name must not have number");
+					return false;
+				}
+				return true;
+			
+			}
+
+			function checkfun(){
+				var c1 = emailfun();
+				var c2 = checkboxfun();
+				var c3 = CheckNumbers();
+				 return c1 && c2 && c3;
+				
+			}	
+		</script>
+	</head>
+
+	<body style="margin-top:0; margin-left:0; background-color:gray">
+		<center>
+			<div style="height:300px; width:400px;">
+				<form name ="form" style="text-align:left; padding:10px; border:15px solid black; background-color:lightgray;"
+						method = "get" action = "emfanizo.html" >
+					<h1> Συμπληρώστε παρακαλώ τα παρακάτω στοιχεία </h1>
+
+					<label style="font-size:20px;">Ονοματεπώνυμο</label>	
+					<br/>
+					<input name="nameTXT" type="text" id="usernam" required> 
+
+					<br/>
+					<br/>
+						<label style="font-size:20px;">Ηλικία(διαλέξτε ένα από τα παρακάτω)</label>
+						<br/>
+						<input type="radio"  name="age" value="17">Εως 17</input>
+						<br/>
+						<input type="radio"  name="age" value="18-30">Από 18 έως 30</input>
+						<br/>
+						<input type="radio"  name="age" value="31-40">Από 31 εώς 40</input>
+						<br/>
+						<input type="radio"  name="age" value="41-55">Από 41 έως 55</input>
+						<br/>
+						<input type="radio"  name="age" value="over55">πάνω απο 55</input>
+					<br/>
+					<br/>
+					<label style="font-size:20px;">Τι ομάδα/ες υποστιρίζεις</label>
+					<br/>
+					<input id="paok" type="checkbox" name="team0" value="paok"> ΠΑΟΚ<br/>
+					<input id="aris" type="checkbox" name="team1" value="aris"> ΑΡΗΣ<br/>
+					<input id="iraklis" type="checkbox" name="team2" value="iraklis"> ΗΡΑΚΛΗΣ<br/>
+					<input id="olimpiakos" type="checkbox" name="team3" value="olimpiakos"> ΟΛΥΜΠΙΑΚΟΣ<br/>
+					<input id="panathinaikos" type="checkbox" name="team4" value="panathinaikos"> ΠΑΝΑΘΗΝΑΙΚΟΣ<br/>
+					<input id="larisa" type="checkbox" name="team5" value="larisa"> ΛΑΡΙΣΑ<br/>
+					<br/>
+					
+					<label style="font-size:20px;">Πιά μάρκα αμαξιού προτιμάς περισσότερο</label>
+					<br/>
+					<select name="Cars" multiple>
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="mercedes">Mercedes</option>
+						<option value="audi">Audi</option>
+						<option value="Renault">Renault</option>
+						<option value="else">Something else</option>
+					</select>
+					
+					<br/>
+					<input name="myEm" type="email" id="usernam" required />
+					<br/>
+					<input type = "submit" onclick="return checkfun();" value ="Submit"/> <button href="ask2_form.html"> Clear</button>
+					
+				</form>
+			</div>
+		</center>
+	</body>
+</html>

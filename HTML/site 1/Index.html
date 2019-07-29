@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		
+		<script>
+			$(document).ready(function(){
+				$("#hide").click(function(){
+					$("video").hide();
+				});
+			});
+			
+			$(document).ready(function(){
+			  $("#show").click(function(){
+					$("video").fadeIn(3000);
+					
+			  });
+			});
+			$(document).ready(function(){
+			  $("#showDs").click(function(){
+					$("p").fadeIn(3000);
+					
+			  });
+			});
+	
+			$(document).ready(function(){
+				$("#hidediscr").click(function(){
+					$("p").slideUp("slow");
+				});
+			});
+			
+			$(document).ready(function(){
+			  $("#biger").click(function(){
+				$("#video1").animate({
+				  left: '250px',
+				  height: '+=50px',
+				  width: '+=50px'
+				});
+			  });
+			});
+			
+			$(document).ready(function(){
+			  $("#smaller").click(function(){
+				$("#video1").animate({
+				  left: '250px',
+				  height: '-=50px',
+				  width: '-=50px'
+				});
+			  });
+			});
+				
+			$(document).ready(function(){
+			  $("#ChangeListStyle").click(function(){
+				$("list").toggleClass("list");
+			  });
+			});
+			
+			$(document).ready(function(){
+			  $("#ChangeListStyle2").click(function(){
+				$("list2").toggleClass("list2");
+			  });
+			});
+
+		</script>
+		
+		<title> Paok_page</title>
+		<link rel="stylesheet" href="ask1.css"/>
+		
+	</head>
+
+	<body>
+		<header>
+		<h2>ΠΟΔΟΣΦΑΙΡΙΚΕΣ ΟΜΑΔΕΣ ΘΕΣΣΑΛΟΝΙΚΗΣ</h2>
+		</header>
+			
+		<section> 
+			<sides>
+				<list>
+					<li><a href=Index.html> ΠΑΟΚ  </a></li>
+					<li><a href=ask1Page1.html> ΑΡΗΣ </a></li>
+					<li><a href=ask1Page2.html> ΗΡΑΚΛΗΣ </a></li>	
+				</list>
+			<button id="ChangeListStyle">Change style</button>	
+			<br/>
+			<br/>
+			<br/>
+			<list2>
+			<li> just </li>
+			<li> practice </li>
+			<li> with </li>
+			<li> lists </li>
+			
+			</list2>
+			<button id="ChangeListStyle2">Change style</button>	
+		</sides>
+		
+		
+			<centerPan class="c1">	
+			
+				<h1>PAOK F.C.</h1>
+					<p>Ο ΠΑΟΚ συμμετέχει σε όλα τα πρωταθλήματα Α εθνικής από την ίδρυση της κατηγορίας την περίοδο 1959–60, 
+					έχοντας κατακτήσει τρεις φορές το πρωτάθλημα Ελλάδας, το 1976, το 1985 και το 2019 καθώς και έξι φορές το
+					κύπελλο Ελλάδας, το 1972, 1974, 2001, 2003, 2017 και 2018, ενώ έχει συμμετάσχει και σε 13 ακόμη τελικούς 
+					της διοργάνωσης. Στο ενεργητικό του έχει επίσης αρκετές αξιομνημόνευτες πορείες και νίκες στις ευρωπαϊκές 
+					διοργανώσεις. Μαζί με τον Άρη συγκροτούν το ντέρμπι της Θεσσαλονίκης, το οποίο έχει μακρές ιστορικές ρίζες 
+					που ανάγονται στα μέσα της δεκαετίας του 1920 με τους «κιτρινόμαυρους» να εκφράζουν κατά κύριο λόγο τους 
+					γηγενείς και την αστική τάξη και τους «ασπρόμαυρους» το προλεταριακό-προσφυγικό στοιχείο της πόλης.
+					</p>
+					
+				<h1>Υμνος PAOK</h1> 	
+				<audio controls >
+						<source src="paok/Ύμνος_ΠΑΟΚ.mp3" type="audio/mpeg"/>
+					</audio>
+					<br/>
+				<video id="video1" src="paok/goal.mp4" width="325px" height="175px " controls/> 
+				
+			</centerPan>
+			
+			<sides>
+				<ul>
+				  <li><a href="Index.html">HOME PAGE</a></li>
+				  <br/>
+				  <li><a href="http://superleaguegreece.net/el/scoreboard/2018-2019-superleague-79">super league</a>
+				  <li><a href="https://www.facebook.com/PAOKFOOTBALL/">PAOK facebook page</a>
+				  <li><a href="https://www.facebook.com/ARIS.FC.OFFICIAL/">ARIS facebook page</a>
+				</ul>
+
+				<button id="hide">Hide video</button>
+				<button id="show">Show video</button>
+				<br/>
+				<button id="hidediscr">Hide descr</button>
+				<button id="showDs">Show descr</button>
+				<br/>
+				<button id="biger">Video size+</button>
+				<button id="smaller">Video size-</button>
+				
+				
+				
+			</sides>
+			
+	
+		</section>
+				
+		<footer> Football </footer>	
+	</body>
+</html>
